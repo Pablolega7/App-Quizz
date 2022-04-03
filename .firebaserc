@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "quizz-app-48ae0": {
+      "hosting": {
+        "appQuiz": [
+          "quizz-app-48ae0"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "quizz-app-48ae0"
+  }
+}

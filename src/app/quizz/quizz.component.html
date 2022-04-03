@@ -1,0 +1,52 @@
+
+<div>
+    <div class="">
+        <div class="">
+            <div class="col-12 d-flex">
+                <div class="headCustom">
+                    <div>{{actualQuestion+1}}/{{questions.length}}</div>
+                </div>
+                <div routerLink="/home" class="headClose"> X </div>
+            </div>
+        </div>
+
+<ng-container *ngIf="(loading$ | async); else elseTemplate">
+    <div class="spinner-grow" style="width: 3rem; height: 3rem;" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+</ng-container>
+
+<ng-template #elseTemplate>
+    
+    <div class="container">
+        <div class="row">
+        
+                <div class="text-center mt-2 mb-2" >
+                    {{questions[actualQuestion].question}}
+                </div>
+                <hr>
+              <ng-container>
+
+                    <div class="col-6 " *ngFor="let answer of questions[actualQuestion].answers">
+                    
+                        <div (click)="nextQuestion()" class="card selectCustom mb-2" >
+                            <img [src]="answer.image" class="card-img-top">
+                            <div class="card-body">
+                              <h5 class="card-title text-center">{{answer.text}}</h5>
+                            </div>
+                          </div>
+                    </div>
+
+
+              </ng-container>
+              
+
+
+
+        </div>
+    </div>
+</ng-template>
+
+
+    </div>
+</div>

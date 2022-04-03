@@ -1,8 +1,9 @@
 
+
 <div class="container">
     <div class="row">
         <div class="col-12">
-            <div class="customCLose" routerLink="/home">X</div>
+            <div class="customCLose" (click)="resetQuizz()" routerLink="/home">X</div>
         </div>
     </div>
     <div>
@@ -12,13 +13,13 @@
         ¡Feliciades!
     </h1>
     <div class="mt-5 ps-5 pe-5 text-center">
-        Preguntas Correctas:                                                      
+        Total de Puntos:  {{result$| async}}                                                    
     </div>
     <div class="mt-5 ps-5 pe-5 text-center">
-        Tiempo Invertido:
+        Tiempo Invertido: {{finishTime}}
     </div>
     <p class="mt-5 ps-5 pe-5 text-center">
-        Si quedas finalista, nos pondremos en contacto contigo.
+        Si quedas finalista, nos <br> pondremos en contacto contigo.
     </p>
 
     <img class="iconsImg" src="../../assets/images/facebook.png"  alt="">

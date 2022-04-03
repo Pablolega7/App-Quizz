@@ -14,4 +14,12 @@ export const selectQuestionsLoading = createSelector(
     selectQuizzState,
   (state: QuizzState ) => state.loading
 );
+export const selectResult = createSelector(
+    selectQuizzState,
+  (state: QuizzState ) => state.result  
+);
+export const selectStart = createSelector(
+    selectQuizzState,
+  (state: QuizzState ) => state.start
+);
 

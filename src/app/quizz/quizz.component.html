@@ -6,7 +6,7 @@
                 <div class="headCustom">
                     <div>{{actualQuestion+1}}/{{questions.length}}</div>
                 </div>
-                <div routerLink="/home" class="headClose"> X </div>
+                <div (click)="resetQuizz()" routerLink="/home" class="headClose"> X </div>
             </div>
         </div>
 
@@ -27,9 +27,9 @@
                 <hr>
               <ng-container>
 
-                    <div class="col-6 " *ngFor="let answer of questions[actualQuestion].answers">
+                    <div class="col-6 "  *ngFor="let answer of questions[actualQuestion].answers">
                     
-                        <div (click)="nextQuestion()" class="card selectCustom mb-2" >
+                        <div (click)="resp(answer.score)" class="card selectCustom mb-2" >
                             <img [src]="answer.image" class="card-img-top">
                             <div class="card-body">
                               <h5 class="card-title text-center">{{answer.text}}</h5>

@@ -7,13 +7,38 @@
 }
 
 .medallaImg{
-    width: 200px;
+    width: 220px;
     margin-top: 80px;
-    margin-left: 85px;
 }
 
-.iconsImg{
-    width: 70px;
-    margin-top: 80px;
-    margin-left: 85px;
+ .iconFacebook{
+    width: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.iconTwitter{
+    width: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.points{
+    color: blue;
+    font-family: cursive;
+    font-size: large;
+}
+
+.time{
+    color: blue;
+    font-family: cursive;
+    font-size: large;
+}
+
+.homeContent{
+    height: calc(100vh - 150px) !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

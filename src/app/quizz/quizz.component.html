@@ -1,6 +1,6 @@
 
-<div>
-    <div class="">
+<div class="animate__animated animate__backInLeft">
+    <div>
         <div class="">
             <div class="col-12 d-flex">
                 <div class="headCustom">
@@ -10,22 +10,22 @@
             </div>
         </div>
 
-<ng-container *ngIf="(loading$ | async); else elseTemplate">
-    <div class="spinner-grow" style="width: 3rem; height: 3rem;" role="status">
-        <span class="visually-hidden">Loading...</span>
-      </div>
-</ng-container>
+        <ng-container *ngIf="(loading$ | async); else elseTemplate">
+          <div class="spinner-grow" style="width: 3rem; height: 3rem;" role="status">
+           <span class="visually-hidden">Loading...</span>
+           </div>
+        </ng-container>
 
-<ng-template #elseTemplate>
+      <ng-template #elseTemplate>
     
-    <div class="container">
-        <div class="row">
+        <div class="container">
+            <div class="row">
         
                 <div class="text-center mt-2 mb-2" >
                     {{questions[actualQuestion].question}}
                 </div>
                 <hr>
-              <ng-container>
+                <ng-container>
 
                     <div class="col-6 "  *ngFor="let answer of questions[actualQuestion].answers">
                     
@@ -36,17 +36,9 @@
                             </div>
                           </div>
                     </div>
-
-
-              </ng-container>
-              
-
-
-
+                 </ng-container>     
+            </div>
         </div>
-    </div>
-</ng-template>
-
-
-    </div>
+     </ng-template>
+     </div>
 </div>

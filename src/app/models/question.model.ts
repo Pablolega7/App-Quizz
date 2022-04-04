@@ -1,17 +1,18 @@
+
+
 export interface ServerResponse {
-        success: number,
-        data: Question[]
-    
-}
+    success: number,
+    data   : Question[] 
+};
 
 
 export interface Question {
     question: string;
-    answers:  Answer[];
-}
+    answers :  Answer[];
+};
 
 export interface Answer {
-    text:  string;
+    text :  string;
     image: string;
     score: number;
-}
+};

@@ -1,11 +1,16 @@
+//ANGULAR//
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+//NGRX//
 import { Store } from '@ngrx/store';
-import {  Subscription } from 'rxjs';
 import { MainState } from '../main.reducer';
 import { selectQuestions, selectQuestionsLoading } from '../store/quizz/quizz.selectors';
-import { Question } from '../models/question.model';
 import { addResult, getquestions, setStartTime, resetQuizz } from '../store/quizz/quizz.actions';
-import { Router } from '@angular/router';
+//MODELOS//
+import { Question } from '../models/question.model';
+//RXJS//
+import {  Subscription } from 'rxjs';
+
 
 @Component({
   selector: 'app-quizz',
@@ -14,17 +19,16 @@ import { Router } from '@angular/router';
 })
 export class QuizzComponent implements OnInit, OnDestroy {
 
-quizz$ = this.store.select( selectQuestions );
-quizzSubs: Subscription;
-questions: Question[];
+ quizz$ = this.store.select( selectQuestions );
+ quizzSubs: Subscription;
+ questions: Question[];
 
-check: boolean = false;
+ check         : boolean = false;
+ actualQuestion: number  = 0;
 
-actualQuestion: number = 0;
+ loading$ = this.store.select( selectQuestionsLoading );
 
-loading$ = this.store.select( selectQuestionsLoading );
-
-  constructor( private store: Store<MainState>, private router: Router) { }
+ constructor( private store: Store<MainState>, private router: Router ) { }
   
 
   ngOnInit(): void {
@@ -34,8 +38,8 @@ loading$ = this.store.select( selectQuestionsLoading );
   };
 
   nextQuestion() {
-   if (this.actualQuestion < this.questions.length - 1) this.actualQuestion++;
-   else  this.router.navigate(['/result']);
+   if ( this.actualQuestion < this.questions.length - 1 ) this.actualQuestion++;
+   else this.router.navigate( ['/result'] );
   };
 
   resp(score: number) {
@@ -46,11 +50,11 @@ loading$ = this.store.select( selectQuestionsLoading );
       this.nextQuestion();
       this.check = false;
     }, 300);
-  }
+  };
 
   resetQuizz(){ 
-    this.store.dispatch( resetQuizz() ) 
-  }
+    this.store.dispatch( resetQuizz() ); 
+  };
 
 
   ngOnDestroy(): void {

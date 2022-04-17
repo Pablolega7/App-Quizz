@@ -1,4 +1,5 @@
 
+$color-primary:blue;
 
 .customCLose{
     position: absolute;
@@ -13,25 +14,28 @@
 
  .iconFacebook{
     width: 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: block;
+    float: left;
+    margin-top: 20px;
+    margin-right: 100px;
+    text-align: center;
 }
 .iconTwitter{
     width: 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: block;
+    float: left;
+    margin-left: 70px;
+    margin-top: -50px;
 }
 
 .points{
-    color: blue;
+    color: $color-primary;
     font-family: cursive;
     font-size: large;
 }
 
 .time{
-    color: blue;
+    color: $color-primary;
     font-family: cursive;
     font-size: large;
 }

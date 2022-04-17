@@ -1,0 +1,54 @@
+.customCLose {
+  position: absolute;
+  right: 17px;
+  top: 10px;
+}
+
+.medallaImg {
+  width: 220px;
+  margin-top: 80px;
+}
+
+.iconFacebook {
+  width: 50px;
+  display: block;
+  float: left;
+  margin-top: 20px;
+  margin-right: 100px;
+  text-align: center;
+}
+
+.iconTwitter {
+  width: 50px;
+  display: block;
+  float: left;
+  margin-left: 70px;
+  margin-top: -50px;
+}
+
+.points {
+  color: blue;
+  font-family: cursive;
+  font-size: large;
+}
+
+.time {
+  color: blue;
+  font-family: cursive;
+  font-size: large;
+}
+
+.homeContent {
+  height: calc(100vh - 150px) !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/*# sourceMappingURL=result.component.css.map */

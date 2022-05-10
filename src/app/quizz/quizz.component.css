@@ -35,7 +35,7 @@
 }
 
 .selectCustom:hover {
-  border: 2px solid blue;
+  border: 3px solid blue;
   cursor: pointer;
   border-radius: 40px;
   overflow: hidden;

@@ -14,11 +14,14 @@ $color-primary:blue;
 
  .iconFacebook{
     width: 50px;
-    display: block;
-    float: left;
-    margin-top: 20px;
+    display: inline-flex;
     margin-right: 100px;
     text-align: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
 }
 .iconTwitter{
     width: 50px;
